@@ -1,0 +1,25 @@
+{
+  "name": "greatestfoodplaceintheworld",
+  "version": "1.0.0",
+  "description": "A restaurant front-page with a menu and contact info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rey810/restaurant-page.git"
+  },
+  "author": "Reymond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rey810/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/Rey810/restaurant-page#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
