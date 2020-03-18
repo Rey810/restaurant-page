@@ -21,14 +21,50 @@ body {
       font-weight: bolder;
       color: #ffffffd6;
       margin-bottom: 0;
+      animation: fadeIn 0.8s forwards;
     }
     #copy {
-      font-size: 3em;
+      font-size: 3.4em;
       margin-top: 0;
       color: #fff;
       display: inline-block;
       font-weight: lighter;
       text-shadow: 0px 0px 3px black;
+      animation: fadeIn 0.8s forwards;
+      opacity: 0;
+      animation-delay: 0.4s;
     }
+  }
+}
+
+#buttons-container {
+  margin: auto;
+  grid-row: 3;
+  grid-column: 1/4;
+  button {
+    margin: 0 1em;
+    padding: 1em;
+    border-radius: 0.4em;
+    border: none;
+    color: #222520;
+    background-color: #768170;
+    h6,
+    img {
+      vertical-align: middle;
+    }
+    h6 {
+      margin: 0;
+      display: inline;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
   }
 }
