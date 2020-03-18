@@ -31,14 +31,67 @@ body {
   font-weight: bolder;
   color: #ffffffd6;
   margin-bottom: 0;
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
 }
 
 #content #landing-page-text #copy {
-  font-size: 3em;
+  font-size: 3.4em;
   margin-top: 0;
   color: #fff;
   display: inline-block;
   font-weight: lighter;
   text-shadow: 0px 0px 3px black;
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+#buttons-container {
+  margin: auto;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+#buttons-container button {
+  margin: 0 1em;
+  padding: 1em;
+  border-radius: 0.4em;
+  border: none;
+  color: #222520;
+  background-color: #768170;
+}
+
+#buttons-container button h6,
+#buttons-container button img {
+  vertical-align: middle;
+}
+
+#buttons-container button h6 {
+  margin: 0;
+  display: inline;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 /*# sourceMappingURL=stylesheet.css.map */
