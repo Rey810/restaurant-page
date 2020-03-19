@@ -53,9 +53,7 @@ function renderContactPage() {
     //fade out landing page text then remove it
     landingPageText.style.animation = "fadeOut .3s forwards";
 
-    setTimeout(() => {
-      content.removeChild(landingPageText);
-    }, 300);
+    content.removeChild(landingPageText);
 
     //content container
     contactContainer = document.createElement("div");
@@ -66,9 +64,7 @@ function renderContactPage() {
     //fade out landing page text then remove it
     menuContainer.style.animation = "fadeOut .3s forwards";
 
-    setTimeout(() => {
-      content.removeChild(menuContainer);
-    }, 300);
+    content.removeChild(menuContainer);
 
     //content container
     contactContainer = document.createElement("div");
@@ -109,9 +105,7 @@ function renderMenu() {
     //fade out landing page text then remove it
     landingPageText.style.animation = "fadeOut .3s forwards";
 
-    setTimeout(() => {
-      content.removeChild(landingPageText);
-    }, 300);
+    content.removeChild(landingPageText);
 
     //main container
     menuContainer = document.createElement("div");
@@ -122,9 +116,7 @@ function renderMenu() {
     //fade out contact page then remove it
     contactContainer.style.animation = "fadeOut .3s forwards";
 
-    setTimeout(() => {
-      content.removeChild(contactContainer);
-    }, 300);
+    content.removeChild(contactContainer);
 
     //main container
     menuContainer = document.createElement("div");
