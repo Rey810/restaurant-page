@@ -11,10 +11,10 @@ let someStarters = [
 ];
 
 let someMains = [
-  "A Big Bowl of Veggies",
-  "Chia Seeds and a Bunch of Grapes",
+  "A Bowl of Veggies",
+  "Chia & Grapes",
   "A Steak (excl. meat)",
-  "Happy Vibes and A Tribe",
+  "Happy Vibes",
   "3x Giant Potatoes"
 ];
 
@@ -22,8 +22,8 @@ let someDesserts = [
   "Italian Gelato",
   "Custard and Jelly",
   "Black Forest Cake",
-  "200g Ice Cubes (served chilled)",
-  "An Edible Organic Facemask"
+  "Chilled Ice Cubes",
+  "An Edible Facemask"
 ];
 
 function renderLandingPage() {
@@ -173,7 +173,7 @@ function renderMenu() {
     starter.classList.add("starter-rows");
     let starterName = document.createElement("h4");
     //set startername to what it is in the someStarters array
-    starterName.innerHTML = someStarters.slice(i, i + 1);
+    starterName.innerHTML = `${i + 1}. ${someStarters.slice(i, i + 1)}`;
     let starterPrice = document.createElement("h4");
     //set a random price for items
     starterPrice.innerHTML = Math.floor(Math.random() * 100) + 30;
@@ -187,7 +187,7 @@ function renderMenu() {
     main.classList.add("main-rows");
     let mainName = document.createElement("h4");
     //set mainname to what it is in the somemains array
-    mainName.innerHTML = someMains.slice(i, i + 1);
+    mainName.innerHTML = `${i + 1}. ${someMains.slice(i, i + 1)}`;
     let mainPrice = document.createElement("h4");
     //set a random price for items
     mainPrice.innerHTML = Math.floor(Math.random() * 100) + 100;
@@ -201,7 +201,7 @@ function renderMenu() {
     dessert.classList.add("dessert-rows");
     let dessertName = document.createElement("h4");
     //set dessertname to what it is in the somedesserts array
-    dessertName.innerHTML = someDesserts.slice(i, i + 1);
+    dessertName.innerHTML = `${i + 1}. ${someDesserts.slice(i, i + 1)}`;
     let dessertPrice = document.createElement("h4");
     //set a random price for items
     dessertPrice.innerHTML = Math.floor(Math.random() * 100) + 100;
