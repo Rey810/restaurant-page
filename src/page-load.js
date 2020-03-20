@@ -68,9 +68,9 @@ const renderItems = () => {
     let contactImage = document.createElement("img");
 
     //set the source for each image
-    homeImage.src = "/house.png";
-    menuImage.src = "/coffee.png";
-    contactImage.src = "/contact.png";
+    homeImage.src = "house.png";
+    menuImage.src = "coffee.png";
+    contactImage.src = "contact.png";
 
     //append images to buttons
     homeButton.appendChild(homeImage);
