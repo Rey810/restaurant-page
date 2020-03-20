@@ -31,10 +31,10 @@ function renderLandingPage() {
   let content = document.getElementById("content");
 
   if (document.getElementById("menu-container")) {
-    content.innerHTML = "";
+    content.removeChild(document.getElementById("menu-container"));
     renderItems();
   } else if (document.getElementById("contact-container")) {
-    content.innerHTML = "";
+    content.removeChild(document.getElementById("contact-container"));
     renderItems();
   } else {
     console.log("The landing page is already rendered");
@@ -48,6 +48,9 @@ function renderContactPage() {
   let menuContainer;
   let contactContainer;
 
+  //checks for the existence of the other button renderings
+  //removes them first if they exist
+  //they won't exist if the contact page is already present
   if (document.getElementById("landing-page-text")) {
     landingPageText = document.getElementById("landing-page-text");
     //fade out landing page text then remove it
@@ -81,14 +84,29 @@ function renderContactPage() {
   //it already has an id
   let contactHeader = document.createElement("h2");
   contactHeader.innerHTML = "Contact Us";
-  let email = document.createElement("h3");
+  let email = document.createElement("a");
+  email.href = "mailto:reyvdb@gmail.com";
   email.innerHTML = "reyvdb@gmail.com";
-  let twitter = document.createElement("h3");
+  let emailLabel = document.createElement("h4");
+  emailLabel.innerHTML = "email:";
+  emailLabel.appendChild(email);
+  let github = document.createElement("a");
+  github.href = "https://github.com/Rey810";
+  github.innerHTML = "Rey810";
+  let githubLabel = document.createElement("h4");
+  githubLabel.innerHTML = "github:";
+  githubLabel.appendChild(github);
+  let twitter = document.createElement("a");
+  let twitterLabel = document.createElement("h4");
+  twitterLabel.innerHTML = "twitter:";
+  twitter.href = "https://twitter.com/ReY8l0";
   twitter.innerHTML = "@ReY8l0";
+  twitterLabel.appendChild(twitter);
 
   contactContainer.appendChild(contactHeader);
-  contactContainer.appendChild(email);
-  contactContainer.appendChild(twitter);
+  contactContainer.appendChild(emailLabel);
+  contactContainer.appendChild(twitterLabel);
+  contactContainer.appendChild(githubLabel);
   content.appendChild(contactContainer);
 }
 
@@ -113,8 +131,6 @@ function renderMenu() {
     content.appendChild(menuContainer);
   } else if (document.getElementById("contact-container")) {
     contactContainer = document.getElementById("contact-container");
-    //fade out contact page then remove it
-    contactContainer.style.animation = "fadeOut .3s forwards";
 
     content.removeChild(contactContainer);
 
@@ -130,14 +146,23 @@ function renderMenu() {
 
   //3 different sections of the menu
   let startersContainer = document.createElement("section");
+  let starterHeader = document.createElement("h2");
+  starterHeader.innerHTML = "Starters";
+  startersContainer.appendChild(starterHeader);
   startersContainer.id = "starters";
   menuContainer.appendChild(startersContainer);
 
   let mainsContainer = document.createElement("section");
+  let mainHeader = document.createElement("h2");
+  mainHeader.innerHTML = "Mains";
+  mainsContainer.appendChild(mainHeader);
   mainsContainer.id = "mains";
   menuContainer.appendChild(mainsContainer);
 
   let dessertsContainer = document.createElement("section");
+  let dessertsHeader = document.createElement("h2");
+  dessertsHeader.innerHTML = "Desserts";
+  dessertsContainer.appendChild(dessertsHeader);
   dessertsContainer.id = "desserts";
   menuContainer.appendChild(dessertsContainer);
 

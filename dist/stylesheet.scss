@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: "Amatic SC", cursive;
 }
 
 body {
   margin: 0;
   font-size: 1vw;
+  font-family: "Amatic SC", cursive;
 }
 
 #content {
@@ -26,45 +26,136 @@ body {
       font-weight: bolder;
       color: #ffffffd6;
       margin-bottom: 0;
-      animation: fadeIn 0.8s forwards;
+      animation: fadeInSlideALittle 0.4s ease-in forwards;
     }
     #copy {
       font-size: 3.4em;
       margin-top: 0;
       color: #fff;
       display: inline-block;
-      font-weight: lighter;
       text-shadow: 0px 0px 3px black;
-      animation: fadeIn 0.8s forwards;
+      animation: fadeInSlideALittle 0.4s ease-in forwards;
       opacity: 0;
-      animation-delay: 0.4s;
+      animation-delay: 0.2s;
     }
   }
 
   #menu-container {
+    opacity: 0;
+    animation: fadeInSlideALittle 0.3s ease-in forwards;
     grid-row: 1/3;
     grid-column: 1/4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 2em;
+    padding: 3em 6em;
+    height: max-content;
+    border-radius: 3em;
     background-color: #ffffff6b;
+    text-align: center;
+    &:first-child {
+      border-left: 1px solid black;
+    }
     .starter-rows,
     .main-rows,
     .dessert-rows {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      padding: 0 3em;
+      margin: 0 3em;
+    }
+    #starters,
+    #mains,
+    #desserts {
+      font-size: 1.3em;
+      letter-spacing: 0.1em;
+      div {
+        margin: 0.5em 0;
+        font-family: "Arial";
+        text-align: left;
+      }
+      h4 {
+        margin: 0.2em 0.1em;
+      }
+      h2 {
+        font-size: 1.8em;
+      }
+    }
+    #starters {
+      opacity: 0;
+      animation: fadeInWithoutSlide 0.3s ease-in 0.3s forwards;
+    }
+
+    #mains {
+      opacity: 0;
+      animation: fadeInWithoutSlide 0.3s ease-in 0.45s forwards;
+    }
+    #desserts {
+      opacity: 0;
+      animation: fadeInWithoutSlide 0.3s ease-in 0.6s forwards;
+    }
+  }
+
+  #contact-container {
+    opacity: 0;
+    margin-top: 1em;
+    padding: 0 2em;
+    background-color: #ffffff6b;
+    grid-column: 2;
+    grid-row: 1/3;
+    text-align: center;
+    font-size: 2em;
+    animation: fadeInSlideALittle 0.3s ease-in forwards;
+    h2 {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-in 0.2s forwards;
+    }
+    h4:nth-of-type(1) {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-in 0.3s forwards;
+    }
+    h4:nth-of-type(2) {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-in 0.4s forwards;
+    }
+    h4:nth-of-type(3) {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-in 0.5s forwards;
+    }
+    h4:nth-of-type(4) {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-in 0.6s forwards;
+    }
+    h4 {
+      font-weight: lighter;
+      text-align: left;
+    }
+    a {
+      font-weight: bold;
+      padding: 0px 1em;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: #527144;
+      }
     }
   }
 }
 
 #buttons-container {
-  grid-row: 3;
-  grid-column: 2;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 4em;
+  height: 50px;
+  transform: translate(50%);
+  right: 50%;
   button {
+    font-family: "Amatic SC", cursive;
+    opacity: 0;
+    grid-row: 2;
     margin: 0 0.2em;
     border-radius: 0.4em;
     border: none;
@@ -77,22 +168,60 @@ body {
     }
     h6,
     img {
+      transform: scale(0.6);
       vertical-align: middle;
+    }
+    img:nth-of-type(3) {
+      transform: scale(0.7);
     }
     h6 {
       margin: 0.6em;
+      margin-left: 0.1em;
       display: inline;
     }
   }
+  button:nth-of-type(1) {
+    animation: fadeIn 0.3s ease-in 0.5s forwards;
+  }
+  button:nth-of-type(2) {
+    animation: fadeIn 0.3s ease-in 0.55s forwards;
+  }
+  button:nth-of-type(3) {
+    animation: fadeIn 0.3s ease-in 0.6s forwards;
+  }
 }
 
+//animations
 @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeInWithoutSlide {
   0% {
     opacity: 0;
   }
 
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes fadeInSlideALittle {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 5%, 0);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -103,4 +232,8 @@ body {
   100% {
     opacity: 0%;
   }
+}
+
+//media queries
+@media (max-width: 767px) {
 }
