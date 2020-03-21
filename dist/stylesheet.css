@@ -359,6 +359,16 @@ body {
   #content {
         grid-template-areas: "middle middle middle" "middle middle middle" "bottom bottom bottom";
   }
+  #headline {
+    font-size: 11em !important;
+    -webkit-animation-name: fadeInWithoutSlide !important;
+            animation-name: fadeInWithoutSlide !important;
+  }
+  #copy {
+    font-size: 4em !important;
+    -webkit-animation-name: fadeInWithoutSlide !important;
+            animation-name: fadeInWithoutSlide !important;
+  }
   #menu-container {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -376,6 +386,15 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #menu-container #starters,
+  #menu-container #mains,
+  #menu-container #desserts {
+    -webkit-animation-name: fadeInSlideALittle !important;
+            animation-name: fadeInSlideALittle !important;
+  }
+  #menu-container h2 {
+    margin: 0.8em 0 0.4em 0 !important;
   }
   #contact-container {
     -ms-grid-column: 1 !important;
