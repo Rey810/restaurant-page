@@ -247,12 +247,31 @@ body {
       "bottom bottom bottom";
   }
 
+  #headline {
+    font-size: 11em !important;
+    animation-name: fadeInWithoutSlide !important;
+  }
+
+  #copy {
+    font-size: 4em !important
+    ;
+    animation-name: fadeInWithoutSlide !important;
+  }
+
   #menu-container {
     display: flex !important;
     grid-area: middle;
     justify-content: center;
     font-size: 2em;
     flex-direction: column;
+    #starters,
+    #mains,
+    #desserts {
+      animation-name: fadeInSlideALittle !important;
+    }
+    h2 {
+      margin: 0.8em 0 0.4em 0 !important;
+    }
   }
 
   #contact-container {
