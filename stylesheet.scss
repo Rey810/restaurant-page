@@ -247,6 +247,10 @@ body {
       "bottom bottom bottom";
   }
 
+  #landing-page-text {
+    font-size: 1.7em;
+  }
+
   #headline {
     font-size: 11em !important;
     animation-name: fadeInWithoutSlide !important;
@@ -279,10 +283,13 @@ body {
     grid-row: 1/3 !important;
     display: flex !important;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 4em !important;
-    margin: 5em !important;
+    justify-content: left;
+    font-size: 5em !important;
+    margin: 2em !important;
+    align-items: flex-start;
+    h4 {
+      font-size: 1.3em;
+    }
   }
 
   #buttons-container {
@@ -294,7 +301,7 @@ body {
     right: unset;
     button {
       margin: 2em 0.5em;
-      font-size: 5.5em;
+      font-size: 7.5em;
     }
   }
 }
