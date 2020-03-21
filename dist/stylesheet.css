@@ -20,14 +20,15 @@ body {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "top top top" "middle middle middle" "bottom bottom bottom";
 }
 
 #content #landing-page-text {
-  -ms-grid-row: 2;
-  grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-column: 1 / 4;
+  grid-column: 1/4;
+  -ms-grid-row: 2;
+  grid-row: 2;
   text-align: center;
 }
 
@@ -57,12 +58,10 @@ body {
   opacity: 0;
   -webkit-animation: fadeInSlideALittle 0.3s ease-in forwards;
           animation: fadeInSlideALittle 0.3s ease-in forwards;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-column: 1/4;
+  grid-area: middle;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -353,6 +352,69 @@ body {
   }
   100% {
     opacity: 0%;
+  }
+}
+
+@media (max-width: 767px) {
+  #content {
+        grid-template-areas: "middle middle middle" "middle middle middle" "bottom bottom bottom";
+  }
+  #menu-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: middle;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.7em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact-container {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 3 !important;
+    grid-column: 1/4 !important;
+    -ms-grid-row: 1 !important;
+    -ms-grid-row-span: 2 !important;
+    grid-row: 1/3 !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 4em !important;
+    margin: 5em !important;
+  }
+  #buttons-container {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: bottom;
+    position: relative;
+    margin-bottom: 4em;
+    height: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    right: unset;
+  }
+  #buttons-container button {
+    margin: 2em 0.5em;
+    font-size: 5.5em;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
