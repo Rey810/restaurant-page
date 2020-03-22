@@ -11,11 +11,12 @@ body {
 #content {
   background-image: url(busy-coffee-shop.jpg);
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
   width: 100vw;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
   grid-template-areas:
     "top top top"
     "middle middle middle"
@@ -50,11 +51,11 @@ body {
     grid-area: middle;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 2em;
+    margin: 2em auto;
     padding: 3em 6em;
     height: max-content;
     border-radius: 3em;
-    background-color: #ffffff6b;
+    background-color: #ffffffc4;
     text-align: center;
     &:first-child {
       border-left: 1px solid black;
@@ -105,12 +106,16 @@ body {
     opacity: 0;
     margin-top: 1em;
     padding: 0 2em;
-    background-color: #ffffff6b;
+    background-color: #ffffffc4;
     grid-column: 2;
-    grid-row: 1/3;
+    grid-row: 2;
     text-align: center;
     font-size: 2em;
     animation: fadeInSlideALittle 0.3s ease-in forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: max-content;
     h2 {
       opacity: 0;
       animation: fadeIn 0.3s ease-in 0.2s forwards;
@@ -152,15 +157,16 @@ body {
   grid-template-columns: repeat(3, 1fr);
   position: absolute;
   bottom: 0;
-  margin-bottom: 4em;
+  margin: auto;
   height: 50px;
   transform: translate(50%);
   right: 50%;
+  margin-bottom: 1em;
   button {
     font-family: "Amatic SC", cursive;
     opacity: 0;
     grid-row: 2;
-    margin: 0 0.2em;
+    margin: 0 0.2em 1em 0.2em;
     border-radius: 0.4em;
     border: none;
     color: #101110;
@@ -266,27 +272,24 @@ body {
     display: flex !important;
     grid-area: middle;
     justify-content: center;
-    font-size: 2em;
+    font-size: 2.4em !important;
+    padding: 1em 2em 2em 2em !important;
     flex-direction: column;
     #starters,
     #mains,
     #desserts {
       animation-name: fadeInSlideALittle !important;
+      font-size: 1.3em;
     }
     h2 {
+      font-size: 2em;
       margin: 0.8em 0 0.4em 0 !important;
     }
   }
 
   #contact-container {
-    grid-column: 1/4 !important;
-    grid-row: 1/3 !important;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: left;
     font-size: 5em !important;
-    margin: 2em !important;
-    align-items: flex-start;
+    padding: 1em 2em 2em 2em !important;
     h4 {
       font-size: 1.3em;
     }
@@ -296,11 +299,10 @@ body {
     grid-area: bottom;
     position: relative;
     margin-bottom: 4em;
-    height: unset;
     transform: unset;
     right: unset;
+    min-height: 20vh !important;
     button {
-      margin: 2em 0.5em;
       font-size: 7.5em;
     }
   }
