@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,11 +16,14 @@ body {
   width: 100vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-areas: "top top top" "middle middle middle" "bottom bottom bottom";
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr) [3];
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "top top top"
+    "middle middle middle"
+    "bottom bottom bottom";
 }
 
 #content #landing-page-text {
@@ -38,7 +41,8 @@ body {
   color: #ffffffd6;
   margin-bottom: 0;
   -webkit-animation: fadeInSlideALittle 0.4s ease-in forwards;
-          animation: fadeInSlideALittle 0.4s ease-in forwards;
+  -moz-animation: fadeInSlideALittle 0.4s ease-in forwards;
+  animation: fadeInSlideALittle 0.4s ease-in forwards;
 }
 
 #content #landing-page-text #copy {
@@ -48,24 +52,28 @@ body {
   display: inline-block;
   text-shadow: 0px 0px 3px black;
   -webkit-animation: fadeInSlideALittle 0.4s ease-in forwards;
-          animation: fadeInSlideALittle 0.4s ease-in forwards;
+  -moz-animation: fadeInSlideALittle 0.4s ease-in forwards;
+  animation: fadeInSlideALittle 0.4s ease-in forwards;
   opacity: 0;
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 #content #menu-container {
   opacity: 0;
+  -moz-animation: fadeInSlideALittle 0.3s ease-in forwards;
+
   -webkit-animation: fadeInSlideALittle 0.3s ease-in forwards;
-          animation: fadeInSlideALittle 0.3s ease-in forwards;
+  animation: fadeInSlideALittle 0.3s ease-in forwards;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: middle;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
   margin: 2em;
   padding: 3em 6em;
   height: -webkit-max-content;
@@ -88,11 +96,11 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 0 3em;
   margin: 0 3em;
 }
@@ -128,19 +136,22 @@ body {
 #content #menu-container #starters {
   opacity: 0;
   -webkit-animation: fadeInWithoutSlide 0.3s ease-in 0.3s forwards;
-          animation: fadeInWithoutSlide 0.3s ease-in 0.3s forwards;
+  -moz-webkit-animation: fadeInWithoutSlide 0.3s ease-in 0.3s forwards;
+  animation: fadeInWithoutSlide 0.3s ease-in 0.3s forwards;
 }
 
 #content #menu-container #mains {
   opacity: 0;
   -webkit-animation: fadeInWithoutSlide 0.3s ease-in 0.45s forwards;
-          animation: fadeInWithoutSlide 0.3s ease-in 0.45s forwards;
+  -moz-animation: fadeInWithoutSlide 0.3s ease-in 0.45s forwards;
+  animation: fadeInWithoutSlide 0.3s ease-in 0.45s forwards;
 }
 
 #content #menu-container #desserts {
   opacity: 0;
+  -moz-animation: fadeInWithoutSlide 0.3s ease-in 0.6s forwards;
   -webkit-animation: fadeInWithoutSlide 0.3s ease-in 0.6s forwards;
-          animation: fadeInWithoutSlide 0.3s ease-in 0.6s forwards;
+  animation: fadeInWithoutSlide 0.3s ease-in 0.6s forwards;
 }
 
 #content #contact-container {
@@ -156,37 +167,46 @@ body {
   text-align: center;
   font-size: 2em;
   -webkit-animation: fadeInSlideALittle 0.3s ease-in forwards;
-          animation: fadeInSlideALittle 0.3s ease-in forwards;
+  -moz-animation: fadeInSlideALittle 0.3s ease-in forwards;
+  animation: fadeInSlideALittle 0.3s ease-in forwards;
 }
 
 #content #contact-container h2 {
   opacity: 0;
   -webkit-animation: fadeIn 0.3s ease-in 0.2s forwards;
-          animation: fadeIn 0.3s ease-in 0.2s forwards;
+  -moz-animation: fadeIn 0.3s ease-in 0.2s forwards;
+  animation: fadeIn 0.3s ease-in 0.2s forwards;
 }
 
 #content #contact-container h4:nth-of-type(1) {
   opacity: 0;
   -webkit-animation: fadeIn 0.3s ease-in 0.3s forwards;
-          animation: fadeIn 0.3s ease-in 0.3s forwards;
+  -moz-animation: fadeIn 0.3s ease-in 0.3s forwards;
+  animation: fadeIn 0.3s ease-in 0.3s forwards;
 }
 
 #content #contact-container h4:nth-of-type(2) {
   opacity: 0;
   -webkit-animation: fadeIn 0.3s ease-in 0.4s forwards;
-          animation: fadeIn 0.3s ease-in 0.4s forwards;
+  -moz-animation: fadeIn 0.3s ease-in 0.4s forwards;
+
+  animation: fadeIn 0.3s ease-in 0.4s forwards;
 }
 
 #content #contact-container h4:nth-of-type(3) {
   opacity: 0;
   -webkit-animation: fadeIn 0.3s ease-in 0.5s forwards;
-          animation: fadeIn 0.3s ease-in 0.5s forwards;
+  -moz-animation: fadeIn 0.3s ease-in 0.5s forwards;
+
+  animation: fadeIn 0.3s ease-in 0.5s forwards;
 }
 
 #content #contact-container h4:nth-of-type(4) {
   opacity: 0;
   -webkit-animation: fadeIn 0.3s ease-in 0.6s forwards;
-          animation: fadeIn 0.3s ease-in 0.6s forwards;
+  -moz-animation: fadeIn 0.3s ease-in 0.6s forwards;
+
+  animation: fadeIn 0.3s ease-in 0.6s forwards;
 }
 
 #content #contact-container h4 {
@@ -208,14 +228,14 @@ body {
 #buttons-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
   position: absolute;
   bottom: 0;
   margin-bottom: 4em;
   height: 50px;
   -webkit-transform: translate(50%);
-          transform: translate(50%);
+  transform: translate(50%);
   right: 50%;
 }
 
@@ -230,7 +250,7 @@ body {
   color: #101110;
   background-color: #b5c8ac;
   -webkit-box-shadow: 0px 3px 3px black;
-          box-shadow: 0px 3px 3px black;
+  box-shadow: 0px 3px 3px black;
   font-size: 3em;
 }
 
@@ -241,13 +261,13 @@ body {
 #buttons-container button h6,
 #buttons-container button img {
   -webkit-transform: scale(0.6);
-          transform: scale(0.6);
+  transform: scale(0.6);
   vertical-align: middle;
 }
 
 #buttons-container button img:nth-of-type(3) {
   -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 #buttons-container button h6 {
@@ -257,25 +277,28 @@ body {
 }
 
 #buttons-container button:nth-of-type(1) {
+  -moz-animation: fadeIn 0.3s ease-in 0.5s forwards;
   -webkit-animation: fadeIn 0.3s ease-in 0.5s forwards;
-          animation: fadeIn 0.3s ease-in 0.5s forwards;
+  animation: fadeIn 0.3s ease-in 0.5s forwards;
 }
 
 #buttons-container button:nth-of-type(2) {
+  -moz-animation: fadeIn 0.3s ease-in 0.55s forwards;
   -webkit-animation: fadeIn 0.3s ease-in 0.55s forwards;
-          animation: fadeIn 0.3s ease-in 0.55s forwards;
+  animation: fadeIn 0.3s ease-in 0.55s forwards;
 }
 
 #buttons-container button:nth-of-type(3) {
+  -moz-animation: fadeIn 0.3s ease-in 0.6s forwards;
   -webkit-animation: fadeIn 0.3s ease-in 0.6s forwards;
-          animation: fadeIn 0.3s ease-in 0.6s forwards;
+  animation: fadeIn 0.3s ease-in 0.6s forwards;
 }
 
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 20%, 0);
-            transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
   }
   100% {
     opacity: 100%;
@@ -286,7 +309,7 @@ body {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 20%, 0);
-            transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
   }
   100% {
     opacity: 100%;
@@ -315,12 +338,12 @@ body {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 5%, 0);
-            transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 5%, 0);
   }
   100% {
     opacity: 100%;
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -328,12 +351,12 @@ body {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 5%, 0);
-            transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 5%, 0);
   }
   100% {
     opacity: 100%;
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -357,7 +380,10 @@ body {
 
 @media (max-width: 767px) {
   #content {
-        grid-template-areas: "middle middle middle" "middle middle middle" "bottom bottom bottom";
+    grid-template-areas:
+      "middle middle middle"
+      "middle middle middle"
+      "bottom bottom bottom";
   }
   #landing-page-text {
     font-size: 1.7em;
@@ -365,12 +391,14 @@ body {
   #headline {
     font-size: 11em !important;
     -webkit-animation-name: fadeInWithoutSlide !important;
-            animation-name: fadeInWithoutSlide !important;
+    -moz-animation-name: fadeInWithoutSlide !important;
+    animation-name: fadeInWithoutSlide !important;
   }
   #copy {
     font-size: 4em !important;
     -webkit-animation-name: fadeInWithoutSlide !important;
-            animation-name: fadeInWithoutSlide !important;
+    -moz-animation-name: fadeInWithoutSlide !important;
+    animation-name: fadeInWithoutSlide !important;
   }
   #menu-container {
     display: -webkit-box !important;
@@ -382,19 +410,21 @@ body {
     -ms-grid-column-span: 3;
     grid-area: middle;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-size: 2em;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   #menu-container #starters,
   #menu-container #mains,
   #menu-container #desserts {
     -webkit-animation-name: fadeInSlideALittle !important;
-            animation-name: fadeInSlideALittle !important;
+    -moz-animation-name: fadeInSlideALittle !important;
+
+    animation-name: fadeInSlideALittle !important;
   }
   #menu-container h2 {
     margin: 0.8em 0 0.4em 0 !important;
@@ -411,16 +441,16 @@ body {
     display: flex !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;
     font-size: 5em !important;
     margin: 2em !important;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   #contact-container h4 {
     font-size: 1.3em;
@@ -434,7 +464,7 @@ body {
     margin-bottom: 4em;
     height: unset;
     -webkit-transform: unset;
-            transform: unset;
+    transform: unset;
     right: unset;
   }
   #buttons-container button {
